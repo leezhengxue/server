@@ -1,44 +1,46 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-const path = require('path');
+console.log("hello world");
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
+// const express = require('express');
+// const app = express();
+// const port = 3000;
+// const path = require('path');
 
-app.get('/route',(req,res) => {
-    res.send("another route");
-})
-app.get('/index',(req,res) => {
-  res.sendFile(path.join( __dirname + '/index.html' ));
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// })
 
-app.listen(port, () => {
-  console.log(`Dev app listening on port ${port}`);
-})
+// app.get('/route',(req,res) => {
+//     res.send("another route");
+// })
+// app.get('/index',(req,res) => {
+//   res.sendFile(path.join( __dirname + '/index.html' ));
+// })
 
-const { Client } = require('pg');
-const client = new Client({
-   user : "postgres",
-   password : "leezx",
-   host : "localhost",
-   port : 5432,
-   database : "test"
- })
+// app.listen(port, () => {
+//   console.log(`Dev app listening on port ${port}`);
+// })
 
- client.connect(err => {
-   if (err) {
-     console.error("Connection Error", err.stack);
-   } else {
-     console.log("Connected");
-   }  
- })
+// const { Client } = require('pg');
+// const client = new Client({
+//    user : "postgres",
+//    password : "leezx",
+//    host : "localhost",
+//    port : 5432,
+//    database : "test"
+//  })
+
+//  client.connect(err => {
+//    if (err) {
+//      console.error("Connection Error", err.stack);
+//    } else {
+//      console.log("Connected");
+//    }  
+//  })
 
 
- client.query(`SELECT * FROM person`, (err, result) => {
-   if(!err){
-     console.log(result.rows);
-   }
-   client.end();
- })
+//  client.query(`SELECT * FROM person`, (err, result) => {
+//    if(!err){
+//      console.log(result.rows);
+//    }
+//    client.end();
+//  })
