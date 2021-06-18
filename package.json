@@ -1,11 +1,12 @@
 {
   "name": "work",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "semantic-release": "semantic-release"
   },
   "author": "",
   "license": "ISC",
@@ -14,11 +15,16 @@
     "pg": "^8.6.0"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^17.4.4"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leezhengxue/server.git"
   }
 }
